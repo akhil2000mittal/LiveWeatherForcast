@@ -16,7 +16,7 @@ class WeatherModel {
 
   Future<dynamic> getLocationWeather() async{
     Location location = Location();
-    await location.getCurrentLocation();
+    await location.getCurrentLocation2();
     NetworkHelper networkHelper = NetworkHelper('$networkinkLink?lat=${location.latitude}&lon=${location.longitude}&appid=$apiKey&units=metric');
     
       var wetherData = await networkHelper.getData();
